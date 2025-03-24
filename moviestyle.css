@@ -1,0 +1,129 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+header .logo span {
+    color: red;
+}
+
+header input {
+    flex: 1;
+    margin: 0 16px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+header button {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+nav a {
+    color: #333;
+    margin: 0 16px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Recommended Movies */
+.recommended {
+    padding: 20px;
+}
+
+.recommended h2 {
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.movies-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 16px;
+    overflow-x: auto;
+}
+
+.movie {
+    background-color: #ffffffad;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.movie img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.movie h3 {
+    font-size: 18px;
+    margin: 8px 0 4px;
+}
+
+.movie p {
+    font-size: 14px;
+    color: #666;
+}
+
+.rating {
+    background-color: #000;
+    color: #fff;
+    padding: 4px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Stream Banner */
+.stream-banner {
+    background-color: #212121;
+    color: #ffc107;
+    padding: 16px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-size: 18px;
+}
