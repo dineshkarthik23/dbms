@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .booking-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .booking-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .booking-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+        .booking-status {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .status-confirmed {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .status-cancelled {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .booking-details {
+            margin-bottom: 15px;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        .cancel-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+            flex: 1;
+        }
+        .rebook-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+            flex: 1;
+            text-decoration: none;
+            text-align: center;
+        }
+        .cancel-btn:hover {
+            background-color: #c82333;
+        }
+        .rebook-btn:hover {
+            background-color: #218838;
+        }
+        .cancel-btn:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <h1>Booking History</h1>
+    
+    <div class="booking-card" id="booking-12345">
+        <div class="booking-header">
+            <div class="booking-title">Booking #12345</div>
+            <div class="booking-status status-confirmed" id="booking-status">Confirmed</div>
+        </div>
+        
+        <div class="booking-details">
+            <p><strong>Movie:</strong> Django Unchained</p>
+            <p><strong>Theater:</strong> PVR INOX, Shenoy Nagar</p>
+            <p><strong>Showtime:</strong> 1:00 PM, 26th March 2025</p>
+            <p><strong>Seats:</strong> A5, A6, K6, K7</p>
+            <p><strong>Total Paid:</strong> ₹1200.00</p>
+        </div>
+        
+        <div class="button-group">
+            <button class="cancel-btn" id="cancel-btn" onclick="cancelBooking()">Cancel Ticket</button>
+            <a href="/html/list.html" class="rebook-btn">Rebook Movie</a>
+        </div>
+    </div>
+
+    <script>
+        function cancelBooking() {
+            if (confirm('Are you sure you want to cancel this booking?')) {
+                document.getElementById('booking-status').textContent = 'Cancelled';
+                document.getElementById('booking-status').className = 'booking-status status-cancelled';
+                
+                document.getElementById('cancel-btn').disabled = true;
+                
+                alert('Booking cancelled successfully!');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About ShowBookie</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f6f1f1;
+            color: #231616;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #ff0000;
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
+        
+        p {
+            color: #201111;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .btn {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn:hover {
+            background-color: #cc0000;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+            transform: translateY(-2px);
+        }
+        
+        /* Responsive design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+            
+            p {
+                font-size: 16px;
+            }
+            
+            .btn {
+                padding: 10px 25px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>About ShowBookie</h1>
+        <p>
+            Welcome to ShowBookie, your one-stop destination for booking tickets to the latest movies, 
+            concerts, and events. At ShowBookie, we aim to make ticket booking seamless, convenient, 
+            and enjoyable for everyone.
+        </p>
+        <p>
+            With a user-friendly platform and secure payment options, ShowBookie ensures that you can 
+            reserve your spot at your favorite events with just a few clicks. Whether you're a movie 
+            enthusiast or a concert lover, we've got you covered.
+        </p>
+        <p>
+            Join us in redefining the way you experience entertainment. ShowBookie – Your ticket to 
+            unforgettable moments!
+        </p>
+        <button class="btn" onclick="window.location.href='events.html'">Explore Events</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #ded2d2;
+            color: #130a0a;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            color: #ff0000;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
+        
+        h2 {
+            color: #ff0000;
+            font-size: 24px;
+            margin: 25px 0 15px;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 8px;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin-left: 20px;
+        }
+        
+        li {
+            padding: 10px 0;
+            color: #181111;
+            font-size: 18px;
+        }
+        
+        li:before {
+            content: "•";
+            color: #ff0000;
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        p {
+            color: #271414;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        /* Glow effect on hover for contact items */
+        li:hover, p:hover {
+            text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+            transition: text-shadow 0.3s ease;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+            
+            h2 {
+                font-size: 20px;
+            }
+            
+            li, p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <h2>Emergency Contacts</h2>
+        <ul>
+            <li>Customer Support: +91 12345 67890</li>
+            <li>Technical Support: +91 98765 43210</li>
+            <li>Email: support@pvr.com</li>
+        </ul>
+        <h2>Corporate Office</h2>
+        <p>
+            PVR Limited,<br>
+            Plot No. 1, Sector 18,<br>
+            Gurgaon, Haryana - 122015<br>
+            Phone: +91 124 488 5000
+        </p>
+    </div>
+</body>
+</html>

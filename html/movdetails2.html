@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Booking Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .movie-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .date-selection {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .date-btn {
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      cursor: pointer;
+    }
+
+    .date-btn.active {
+      background-color: #ff4b4b;
+      color: white;
+    }
+
+    .theater {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 10px;
+    }
+
+    .showtimes {
+      display: flex;
+      gap: 10px;
+    }
+
+    .showtime-btn {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      background-color: #e0f7fa;
+      cursor: pointer;
+    }
+
+    .showtime-btn.fast-filling {
+      background-color: #ffeb3b;
+    }
+
+    .showtime-btn.full {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div class="movie-header">
+    <h1>DUNE 2 - English</h1>
+    <span>Action | Sci-Fi</span>
+  </div>
+
+  <div class="date-selection">
+    <button class="date-btn active" onclick="updateDate('26%20Mar')">26 MAR</button>
+    <button class="date-btn" onclick="updateDate('27%20Mar')">27 MAR</button>
+    <button class="date-btn" onclick="updateDate('28%20Mar')">28 MAR</button>
+  </div>
+
+  <div class="theater">
+    <h3>PVR INOX ,Shenoy Nagar</h3>
+    <div class="showtimes">
+      <button class="showtime-btn" onclick="window.location.href='seats.html?movie=DUNE%202%20-%20English&time=1:00%20PM'">1:00 PM</button>
+      <button class="showtime-btn fast-filling" onclick="window.location.href='seats.html?movie=DUNE%202%20-%20English&time=7:00%20PM'">7:00 PM</button>
+      <button class="showtime-btn" onclick="window.location.href='seats.html?movie=DUNE%202%20-%20English&time=11:00%20PM'">11:00 PM</button>
+    </div>
+  </div>
+
+  <div class="theater">
+    <h3>PVR Grand Mall, Velachery</h3>
+    <div class="showtimes">
+      <button class="showtime-btn" onclick="window.location.href='seats.html?movie=DUNE%202%20-%20English&time=12:25%20PM'">12:25 PM</button>
+      <button class="showtime-btn" onclick="window.location.href='seats.html?movie=DUNE%202%20-%20English&time=4:10%20PM'">4:10 PM</button>
+      <button class="showtime-btn" onclick="window.location.href='seats.html?movie=DUNE%202%20-%20English&time=6:40%20PM'">6:40 PM</button>
+    </div>
+  </div>
+
+  <div class="theater">
+    <h3>PVR Ampa Mall, Adyar</h3>
+    <div class="showtimes">
+      <button class="showtime-btn fast-filling" onclick="window.location.href='seats.html?movie=DUNE%202%20-%20English&time=9:30%20PM'">9:30 PM</button>
+    </div>
+  </div>
+
+  <script>
+
+    const dateButtons = document.querySelectorAll('.date-btn');
+    dateButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        dateButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+
+    const showtimeButtons = document.querySelectorAll('.showtime-btn');
+    showtimeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        if (!button.classList.contains('full')) {
+          alert(`You selected ${button.innerText}`);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
